@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="bg-[#0d0d0d] border-t border-gray-800/50 mt-16 sm:mt-32">
+    <footer id="contact" className="bg-[#0d0d0d] border-t border-gray-800/50 mt-16 sm:mt-32">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
           {/* Logo e Slogan */}

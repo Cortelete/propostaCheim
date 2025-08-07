@@ -1,7 +1,30 @@
 
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 const Header: React.FC = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
+
+  const menuItems = [
+    { name: 'Serviços', href: '#services' },
+    { name: 'Resumo', href: '#summary' },
+    { name: 'Investimento', href: '#investment' },
+    { name: 'Contato', href: '#contact' },
+  ];
+  
+  // Close menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+        setIsMenuOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [menuRef]);
+
   return (
     <header className="bg-[#111]/80 backdrop-blur-sm sticky top-0 z-40">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -14,9 +37,38 @@ const Header: React.FC = () => {
               <span>InteligenciArte.IA</span>
             </a>
           </div>
-          <div className="text-right">
-             <p className="text-xs sm:text-sm font-medium text-gray-300">Proposta Exclusiva</p>
-             <p className="text-sm sm:text-base font-semibold text-white">Transformação Digital</p>
+          <div className="relative" ref={menuRef}>
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="flex items-center gap-2 text-sm sm:text-base font-semibold text-white px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg hover:bg-gray-800 transition-colors"
+              aria-expanded={isMenuOpen}
+              aria-controls="main-menu"
+            >
+              Menu
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className={`w-4 h-4 transition-transform duration-200 ${isMenuOpen ? 'rotate-180' : ''}`}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+              </svg>
+            </button>
+            {isMenuOpen && (
+              <nav
+                id="main-menu"
+                className="absolute right-0 mt-2 w-48 bg-[#1a1a1a] border border-gray-700 rounded-lg shadow-lg py-2 z-50 modal-fade-in"
+              >
+                <ul className="flex flex-col">
+                  {menuItems.map((item) => (
+                    <li key={item.name}>
+                      <a
+                        href={item.href}
+                        onClick={() => setIsMenuOpen(false)}
+                        className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white transition-colors"
+                      >
+                        {item.name}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
+            )}
           </div>
         </div>
       </div>

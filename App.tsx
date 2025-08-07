@@ -46,7 +46,7 @@ export default function App(): React.ReactNode {
         </div>
 
         {/* Proposal Sections Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
+        <div id="services" className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
           {PROPOSAL_DATA.map((section) => (
             <ProposalSection key={section.id} section={section} onOpenModal={openModal} />
           ))}
