@@ -40,12 +40,12 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
       aria-modal="true"
     >
       <div
-        className="relative bg-[#1a1a1a] border border-gray-700 rounded-2xl w-full max-w-2xl max-h-[90vh] overflow-y-auto p-8 shadow-2xl modal-fade-in"
+        className="relative bg-[#1a1a1a] border border-gray-700 rounded-2xl w-full max-w-2xl max-h-[90vh] overflow-y-auto p-6 sm:p-8 shadow-2xl modal-fade-in"
         onClick={(e) => e.stopPropagation()}
       >
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 text-gray-500 hover:text-white hover:bg-gray-700 rounded-full p-2 transition-colors duration-200"
+          className="absolute top-3 right-3 sm:top-4 sm:right-4 text-gray-500 hover:text-white hover:bg-gray-700 rounded-full p-2 transition-colors duration-200"
           aria-label="Fechar modal"
         >
           <CloseIcon className="w-6 h-6" />
