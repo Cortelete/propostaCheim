@@ -41,13 +41,13 @@ interface ValueBreakdownSectionProps {
 const ValueBreakdownSection: React.FC<ValueBreakdownSectionProps> = ({ onOpenModal }) => {
     const valueItemsData = [
     {
-      title: 'Desenvolvimento Web Avançado (CheimShop)',
+      title: 'Desenvolvimento Web Avançado',
       description: 'Landing page com sistema de gestão, admin, estoque e vendas. (Equivalente ao nosso Plano Premium)',
       value: '7.000,00',
       href: 'https://iarte.vercel.app/#plans'
     },
     {
-      title: 'Criação da Marca CheimShop',
+      title: 'Criação de Nova Marca',
       description: 'Desenvolvimento do novo nome, logotipo e estratégia de marca completa. (Equivalente ao nosso serviço de Branding)',
       value: '2.500,00',
       href: 'https://iarte.vercel.app/#plans'

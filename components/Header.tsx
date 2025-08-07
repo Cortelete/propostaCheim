@@ -15,9 +15,8 @@ const Header: React.FC = () => {
             </a>
           </div>
           <div className="text-right">
-             <p className="text-sm font-medium text-gray-300">Proposta para:</p>
-             <p className="text-md font-semibold text-white">Cheim Gás e Água + Rações</p>
-             <p className="text-xs font-bold text-amber-300 animate-pulse">Rumo à CheimShop</p>
+             <p className="text-sm font-medium text-gray-300">Proposta Exclusiva</p>
+             <p className="text-md font-semibold text-white">Transformação Digital</p>
           </div>
         </div>
       </div>

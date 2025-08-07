@@ -17,9 +17,9 @@ const SummarySection: React.FC = () => {
       <div className="relative bg-[#1a1a1a]/50 border border-gray-800 rounded-2xl p-8 backdrop-blur-sm overflow-hidden transition-all duration-300 hover:border-gray-700 hover:scale-[1.01] shine-effect">
         <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-white tracking-tight">
-                Resumo Estratégico para a <span className="text-amber-300">CheimShop</span>
+                Resumo Estratégico da <span className="text-amber-300">Proposta</span>
             </h2>
-            <p className="mt-2 text-md text-gray-400 max-w-2xl mx-auto">Como vamos transformar a operação e o marketing do seu delivery sob a nova marca.</p>
+            <p className="mt-2 text-md text-gray-400 max-w-2xl mx-auto">Como vamos transformar a operação e o marketing do seu negócio.</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">

@@ -55,11 +55,11 @@ export const PROPOSAL_DATA: ProposalSection[] = [
         details: 'Design de cartão de visita seguindo a mesma identidade visual do flyer. Alterações são limitadas para focar no resultado. Personalizações artísticas complexas podem ter custo adicional.'
       },
       {
-        text: 'Desenvolvimento Estratégico: Nasce a CheimShop',
-        details: 'Um pacote completo para reformular e impulsionar sua marca, estabelecendo a "CheimShop" no mercado.',
+        text: 'Desenvolvimento Estratégico de Marca',
+        details: 'Um pacote completo para reformular e impulsionar sua marca no mercado.',
         subItems: [
-            'Criação do novo nome e marca: CheimShop.',
-            'Criação de logotipo personalizado para a CheimShop.',
+            'Criação de novo nome e marca.',
+            'Criação de logotipo personalizado.',
             'Desenvolvimento de uma nova identidade visual completa.',
             'Recomendações estratégicas exclusivas para o seu nicho.',
             'Acesso a grupo de mentoria e networking.'

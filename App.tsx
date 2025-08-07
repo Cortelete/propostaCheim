@@ -32,11 +32,10 @@ export default function App(): React.ReactNode {
             className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-amber-200 via-white to-amber-300"
             style={{ backgroundSize: '200% 200%', animation: 'text-gradient-animation 4s ease infinite' }}
           >
-            Proposta de Transformação Digital: <br className="hidden sm:block" /> Nasce a <span className="text-amber-300">CheimShop</span>
+            Proposta de Transformação Digital <br className="hidden sm:block" /> Para o <span className="text-amber-300">Seu Negócio</span>
           </h1>
           <p className="mt-4 max-w-3xl mx-auto text-lg sm:text-xl text-gray-400 transition-colors duration-300 hover:text-gray-300">
-            Uma solução completa da <span className="text-white font-semibold">InteligenciArte.IA</span> para evoluir a{' '}
-            <span className="text-white font-semibold">Cheim Gás e Água + Rações</span> para uma nova marca de sucesso.
+            Uma solução completa da <span className="text-white font-semibold">InteligenciArte.IA</span> para construir uma marca forte e impulsionar seus resultados no ambiente digital.
           </p>
            <div className="mt-8 flex gap-3 justify-center">
                 <div className="inline-flex items-center gap-2 text-sm font-semibold bg-green-500/10 text-green-400 px-4 py-2 rounded-full">

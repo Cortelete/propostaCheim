@@ -39,7 +39,7 @@ const ProposalSection: React.FC<ProposalSectionProps> = ({ section, onOpenModal 
         <ul className="space-y-4">
           {section.benefits.map((benefit, index) => {
             // Destaque especial para o desenvolvimento estratégico
-            if (section.id === 'design-servicos' && benefit.text === 'Desenvolvimento Estratégico') {
+            if (section.id === 'design-servicos' && benefit.text === 'Desenvolvimento Estratégico de Marca') {
               return (
                 <li key={index}>
                   <div className="p-4 bg-amber-900/20 border border-amber-400/30 rounded-xl">
