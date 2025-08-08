@@ -25,6 +25,28 @@ const Header: React.FC = () => {
     };
   }, [menuRef]);
 
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    setIsMenuOpen(false);
+    const targetId = href.substring(1);
+    const targetElement = document.getElementById(targetId);
+
+    if (targetElement) {
+      const headerElement = document.querySelector('header');
+      // Use dynamic header height and add a 1rem (16px) margin for better spacing
+      const headerOffset = headerElement ? headerElement.offsetHeight + 16 : 80;
+
+      const elementPosition = targetElement.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth',
+      });
+    }
+  };
+
+
   return (
     <header className="bg-[#111]/80 backdrop-blur-sm sticky top-0 z-40">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -59,8 +81,8 @@ const Header: React.FC = () => {
                     <li key={item.name}>
                       <a
                         href={item.href}
-                        onClick={() => setIsMenuOpen(false)}
-                        className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white transition-colors"
+                        onClick={(e) => handleNavClick(e, item.href)}
+                        className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white transition-colors cursor-pointer"
                       >
                         {item.name}
                       </a>

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import type { ModalContent } from '../types';
 import BrainIcon from './icons/BrainIcon';
@@ -161,14 +160,11 @@ const ValueBreakdownSection: React.FC<ValueBreakdownSectionProps> = ({ onOpenMod
                 <div className="overflow-hidden max-h-0 group-hover:max-h-48 transition-all duration-500 ease-in-out">
                     <div className="pt-2 sm:pt-4 space-y-3">
                          <p className="text-base sm:text-xl font-semibold text-yellow-400">
-                           Sua economia: <span className="font-bold">R$ 9.500,00</span>
+                           Sua economia: <span className="font-bold">R$ 9.000,00</span>
                          </p>
                          <div className="bg-green-900/30 border border-green-500/30 rounded-lg p-3 mt-2 inline-block">
                             <p className="text-base sm:text-xl font-bold text-green-300">
-                              Investimento agora: R$ 2.000,00
-                            </p>
-                            <p className="text-[10px] sm:text-xs text-gray-400 mt-1">
-                              (oferta válida se confirmada até seg, 04/08/25)
+                              Investimento agora: R$ 2.500,00
                             </p>
                          </div>
                     </div>
